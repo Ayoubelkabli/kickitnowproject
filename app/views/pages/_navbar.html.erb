@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kickitnow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #F2F2F2;
+      overflow: hidden;
+      padding:5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      display: block;
+      color: #000000;
+      text-align: center;
+      padding:10px 13px;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right:5px;
+    }
+
+    .links {
+      display: flex;
+    }
+
+    .links a {
+      margin: 0 10px;
+    }
+
+    .login {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .login a {
+      margin-right: 10px;
+    }
+
+    .login button {
+      background-color: #33673B;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+ h1 {
+      font-size: 24px;
+      margin: 0; 
+    }
+
+    footer {
+      background-color: #F2F2F2;
+      color: #000000;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function setActive(element) {
+        var links = document.querySelectorAll('.links a');
+        links.forEach(function (link) {
+          link.classList.remove('active');
+        });
+
+        element.classList.add('active');
+      }
+
+      var links = document.querySelectorAll('.links a');
+      links.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          setActive(link);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1705942126/Capture_d_%C3%A9cran_2024-01-22_174422_kouvwm.png" />
+</a>
+      <h1>Kickitnow</h1>
+    </div>
+    <div class="links">
+      <a href="#" onclick="setActive(this)">Home</a>
+      <a href="#" onclick="setActive(this)">Services</a>
+      <a href="#" onclick="setActive(this)">Contact</a>
+    </div>
+    <div class="login">
+      <a href="#">Sign Up</a>
+      <button>Log In</button>
+    </div>
+  </nav>
+<footer>
+      <p>&copy; 2024 Stylish Website. All rights reserved. | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+  </nav>
