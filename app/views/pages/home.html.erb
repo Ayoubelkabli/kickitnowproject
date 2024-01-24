@@ -1,2 +1,135 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag("/images/logo1.png") %>
+
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+        <li class="nav-item">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Pitches", "#", class: "nav-link" %>
+          <li class="nav-item active">
+            <%= link_to "Sign up", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", "#", class: "nav-link" %>
+          </li>
+
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<section class="video">
+  <video autoplay muted loop>
+    <source src="/images/videok.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+<button>book now</button>
+</section>
+<section class="about_us">
+
+<div class="about">
+<h2>KickitNow</h2>
+<p>
+ Welcome to KickItNow – Your Premier Destination for Soccer Pitch Bookings!
+
+At KickItNow, we're passionate about soccer and dedicated to providing enthusiasts with a seamless and enjoyable experience when it comes to booking soccer pitches. Whether you're a casual player looking for a friendly match with friends or a team gearing up for a serious training session, KickItNow is your go-to platform.
+</p>
+</div>
+<div class="image__contaire">
+<img src="images/ball.jpeg" alt="rss feed" />
+</div>
+</section>
+<div class="offers">
+<h2>les offre</h2>
+<div class="cards">
+
+  <div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+
+</div>
+</div>
+<section class="testimonies">
+<h2>Testimonials</h2>
+<div class="card__testimonies">
+ <div class="card">
+    <div class="card__title">
+      <img src="images/test2.jpg">
+      <p>Anas</p>
+    </div>
+    <div class="card__body">
+      "KickItNow has revolutionized how I book soccer pitches! The platform is so easy to use, and I can quickly secure a spot for my weekly matches with friends. The variety of high-quality pitches available has made every game a memorable experience. Thanks, KickItNow, for making my soccer passion even more enjoyable!"
+    </div>
+ </div>
+ <div class="card">
+    <div class="card__title">
+      <img src="images/test1.jpg">
+      <p>Ayoub</p>
+    </div>
+    <div class="card__body">
+      "As a team captain, finding the right pitch for our training sessions is crucial. KickItNow has become our go-to solution. The platform's flexibility in booking, combined with the excellent facilities offered by their partner locations, has greatly contributed to our team's success. KickItNow is a game-changer for any serious soccer team!"
+    </div>
+ </div>
+ <div class="card">
+    <div class="card__title">
+      <img src="images/test3.jpg">
+      <p>Mouad</p>
+    </div>
+    <div class="card__body">
+      "Being a soccer enthusiast, KickItNow has become my virtual soccer companion. The platform not only provides hassle-free pitch bookings but also connects me with a community of fellow soccer lovers. I've discovered new pitches, made new friends, and elevated my soccer experience. KickItNow truly understands the pulse of the soccer community."
+    </div>
+ </div>
+ </div>
+</section>
+
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    2024 KickItNow <i class="fas fa-heart"></i> All rights reserved
+  </div>
+</div>
+
+</div>
