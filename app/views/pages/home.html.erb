@@ -1,18 +1,22 @@
+
+<html>
+
+  <head></head>
+    <body>
+
+     
  <div class="home">
 
 
 
 <section class="video">
-<div class="container__text">
-		<h1 class="swift-up-text">Where goals become memories and every match is a journey. Welcome to the heartbeat of soccer – KickItNow
-</h1>
-</div>
   <video autoplay muted loop>
     <source src="/images/videok.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 <%# <button>book now</button> %>
 <div class="container text text-light py-5 aos-init aos-animate"data-aos="fade-right">
+
   <div class="my-3">
   <a class="butn" href="/pitches">Booking Now!</a>
   </div>
@@ -65,32 +69,5 @@ At KickItNow, we're passionate about soccer and dedicated to providing enthusias
     </div>
  </div>
  </div>
-</section>
 
 
-
-
-
-
-</div>
-<script>
-    const swiftUpElements = document.querySelectorAll('.swift-up-text');
-    console.log(swiftUpElements)
-
-swiftUpElements.forEach(elem => {
-
-	const words = elem.textContent.split(' ');
-	elem.innerHTML = '';
-
-	words.forEach((el, index) => {
-		words[index] = `<span class="span"><i>${words[index]}</i></span>`;
-	});
-
-	elem.innerHTML = words.join(' ');
-
-	const children = document.querySelectorAll('.span > i');
-	children.forEach((node, index) => {
-		node.style.animationDelay = `${index * .2}s`;
-	});
-
-});</script>
