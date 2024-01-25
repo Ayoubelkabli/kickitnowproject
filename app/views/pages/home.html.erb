@@ -1,51 +1,22 @@
-<div class="home">
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag("/images/logo1.png") %>
+ <div class="home">
 
-    <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-        <li class="nav-item">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Pitches", "#", class: "nav-link" %>
-          <li class="nav-item active">
-            <%= link_to "Sign up", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Login", "#", class: "nav-link" %>
-          </li>
-
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
-          </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
-      </ul>
-    </div>
-  </div>
-</div>
 <section class="video">
+<div class="container__text">
+		<h1 class="swift-up-text">Where goals become memories and every match is a journey. Welcome to the heartbeat of soccer – KickItNow
+</h1>
+</div>
   <video autoplay muted loop>
     <source src="/images/videok.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-<button>book now</button>
+<%# <button>book now</button> %>
+<div class="container text text-light py-5 aos-init aos-animate"data-aos="fade-right">
+  <div class="my-3">
+  <a class="butn" href="/pitches">Booking Now!</a>
+  </div>
+  </div>
 </section>
 <section class="about_us">
 
@@ -61,28 +32,7 @@ At KickItNow, we're passionate about soccer and dedicated to providing enthusias
 <img src="images/ball.jpeg" alt="rss feed" />
 </div>
 </section>
-<div class="offers">
-<h2>les offre</h2>
-<div class="cards">
 
-  <div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
-
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
-
-</div>
-</div>
 <section class="testimonies">
 <h2>Testimonials</h2>
 <div class="card__testimonies">
@@ -96,6 +46,7 @@ At KickItNow, we're passionate about soccer and dedicated to providing enthusias
     </div>
  </div>
  <div class="card">
+
     <div class="card__title">
       <img src="images/test1.jpg">
       <p>Ayoub</p>
@@ -119,17 +70,27 @@ At KickItNow, we're passionate about soccer and dedicated to providing enthusias
 
 
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    2024 KickItNow <i class="fas fa-heart"></i> All rights reserved
-  </div>
-</div>
+
 
 </div>
+<script>
+    const swiftUpElements = document.querySelectorAll('.swift-up-text');
+    console.log(swiftUpElements)
+
+swiftUpElements.forEach(elem => {
+
+	const words = elem.textContent.split(' ');
+	elem.innerHTML = '';
+
+	words.forEach((el, index) => {
+		words[index] = `<span class="span"><i>${words[index]}</i></span>`;
+	});
+
+	elem.innerHTML = words.join(' ');
+
+	const children = document.querySelectorAll('.span > i');
+	children.forEach((node, index) => {
+		node.style.animationDelay = `${index * .2}s`;
+	});
+
+});</script>

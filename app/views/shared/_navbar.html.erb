@@ -1,7 +1,11 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid ">
+  <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://res.cloudinary.com/dw39u26vq/image/upload/v1705942126/Capture_d_%C3%A9cran_2024-01-22_174422_kouvwm.png" %><span class=' navbar-brand ok'>KickitNow</span>
+      <div class="logo__container">
+            <%= image_tag("/images/logo1.png") %>
+      </div>
+
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,41 +13,26 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+      <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
+        <li class="nav-item">
+            <%= link_to "Home", "/", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Pitches", pitches_path, class: "nav-link" %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Pitches", "#", class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Payment", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "About Us", "#", class: "nav-link" %>
-          </li>
-           <li class="auth">
-           <%= link_to "Sign Up", "#", class: "btn  btn-sucsess" %>
 
-          </li>
-           <li class="auth">
-           <%= link_to "Login", "#", class: "btn  btn-sucsess" %>
-           </li>
-           <div class="form-check form-switch">
-  <label class="form-check-label" for="lightSwitch"> </label>
-  <input class="form-check-input" type="checkbox" id="lightSwitch" />
-</div>
-
-<script src="../../javascript/mode.js"></script>
-
-          <%# <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            <%# </div>
+            </div>
           </li>
-        </div> %>
         <%# else %>
           <!--li class="nav-item"-->
             <%#= link_to "Login", new_user_session_path, class: "nav-link" %>

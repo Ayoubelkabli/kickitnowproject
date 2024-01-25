@@ -1,3 +1,21 @@
+.logo__container {
+  height: 40px;
+  width: 200px;
+  img {
+    width: 186px  !important;
+    object-fit: cover  !important;
+    margin-top: -73px  !important;
+    margin-left: -40px  !important;
+  }
+}
+.nav-link {
+  font-family: Poppins;
+  font-weight: 300 !important;
+  color: #000 !important;
+}
+.dropdown {
+  margin-left: 24px;
+}
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
