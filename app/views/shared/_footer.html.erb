@@ -1,41 +1,64 @@
-<footer class="footer-dark">
-  <div class="container">
-    <div class="row">
+<div class="footer">
 
-      <div class="col-sm-6 col-md-3 item">
-        <h3 data-aos="fade-right">Navigation</h3>
-        <ul data-aos="zoom-in">
-          <li>
-            <%= link_to "Home", '#' %>
-          </li>
-          <li>
-            <%= link_to "Pitches", "#" %>
-          </li>
-          <li>
-            <%= link_to "Payment","#" %>
-          </li>
-          <%# <li>
-            <%= link_to "", winner_path %>
-          <%# </li>  %>
-        </ul>
-      </div>
-      <div class="col-md-6 item text">
-        <h3 data-aos="fade-right">
-          <%= image_tag("https://res.cloudinary.com/dw39u26vq/image/upload/v1705942126/Capture_d_%C3%A9cran_2024-01-22_174422_kouvwm.png", alt: "logo", width: 30, height: 30, class: "navbar-logo", style: "margin-right: 10px;") %>
-          KickitNow
-        </h3>
-        <p data-aos="zoom-in">
-          The Stade platform is a comprehensive sports facility management application designed to offer a multitude of services, including easy online booking
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+          <%= image_tag("/images/logo1.png") %>
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+
+          <a href="#">Blog</a>
+
+          <a href="#">Pricing</a>
+
+          <a href="#">About</a>
+
+          <a href="#">Faq</a>
+
+          <a href="#">Contact</a>
         </p>
+
+        <p class="footer-company-name">Company Name © 2015</p>
       </div>
-    </div>
-    <p class="copyright">KickitNow © 2024, All rights reserved.</p>
-  </div>
-  <div>
-    <a href="mailto:kickitNow@gmail.com?subject=From kickitNow Site" >
-    <i class="mail-us fa-solid fa-headset">
-    </i>
-    </a>
-      <%# <%= image_tag("support_agent_icon.png", class: "mail-us") %>
-  </div>
-</footer>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+</div>
