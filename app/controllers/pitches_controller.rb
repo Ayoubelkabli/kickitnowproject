@@ -13,6 +13,4 @@ class PitchesController < ApplicationController
 
   end
 
-
-
 end
