@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid ">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://res.cloudinary.com/dw39u26vq/image/upload/v1705942126/Capture_d_%C3%A9cran_2024-01-22_174422_kouvwm.png" %><span class=' navbar-brand ok'>KickitNow</span>
+      <%= image_tag "https://res.cloudinary.com/ddiq9sddp/image/upload/v1706098372/2-removebg-preview_kgrfjw.png" %><span class=' navbar-brand ok'>KickitNow</span>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,25 +10,25 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <%# if user_signed_in? %>
+        <%#if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", "/", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Pitches", "#", class: "nav-link" %>
+            <%= link_to "Pitches", pitches_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Payment", "#", class: "nav-link" %>
+            <%= link_to "Payment", payment_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "About Us", "#", class: "nav-link" %>
+            <%= link_to "About Us", "/about", class: "nav-link" %>
           </li>
            <li class="auth">
-           <%= link_to "Sign Up", "#", class: "btn  btn-sucsess" %>
+           <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
 
           </li>
            <li class="auth">
-           <%= link_to "Login", "#", class: "btn  btn-sucsess" %>
+           <%= link_to "Login",new_user_session_path, class: "nav-link" %>
            </li>
            <div class="form-check form-switch">
   <label class="form-check-label" for="lightSwitch"> </label>

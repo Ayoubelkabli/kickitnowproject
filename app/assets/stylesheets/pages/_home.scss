@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(1, 4, 52);
+  background: white
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,16 +11,19 @@
   width: 40px;
 }
 .nav-link,.dropdown-item{
-  color: white;
+  color: black
 }
-
-
+.collapse .navbar-collaps{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .nav-link:hover,.dropdown-item:hover{
-  color: rgba(255, 158, 23, 0.97);
+  color: rgba(138, 83, 7, 0.97);
 }
 .dropdown-item{
-  color: rgb(246, 246, 246);
+  color: rgb(0, 0, 0);
 }
 .nav-item  {
 padding-left: 3em,
@@ -28,17 +31,17 @@ padding-left: 3em,
 
 }
 .auth{
-  color: white;
+  color: black
 }
 
 .auth:hover{
-  color: rgba(255, 158, 23, 0.97);
+  color: rgba(63, 37, 0, 0.97);
 }
 .btn {
   color: white;
 }
 .ok{
-  color:white
+  color:rgb(0, 0, 0)
 
 }
 .ok:hover{
@@ -49,9 +52,9 @@ padding-left: 3em,
 }
 
 .footer-dark {
-  background: rgb(1, 4, 52);
+  background: rgb(255, 255, 255);
    padding: 50px 0;
-   color: rgba(255, 255, 255, 0.925);
+   color: rgba(0, 0, 0, 0.925);
    border-top:  1px solid #c3c3c361;
    width: 100%;
  }
@@ -129,7 +132,7 @@ padding-left: 3em,
    border-radius: 50%;
 
    margin: 0 8px;
-   color: rgb(255, 255, 255);
+   color: rgb(11, 11, 11);
    opacity: 0.75;
  }
 
@@ -144,6 +147,7 @@ padding-left: 3em,
    font-size: 13px;
    margin-bottom: 0;
  }
+
  .mail-us {
    padding-top: 10px;
    font-size: larger;
@@ -153,7 +157,7 @@ padding-left: 3em,
  }
  .mail-us{
    position: fixed;
-   background-color:  rgba(10, 1, 74, 0.925);
+   background-color:  rgba(255, 255, 255, 0.925);
    width: 50px;
    height: 50px;
    text-align: center;
@@ -161,18 +165,112 @@ padding-left: 3em,
    bottom: 10px;
    cursor: pointer;
    display: block;
-   color: rgba(245, 126, 14, 0.97);
+   color: rgba(10, 10, 10, 0.97);
    transition: all 0.4s ease-in-out;
    z-index: 10000000;
-   box-shadow: 0 0 5px #090158;
+   box-shadow: 0 0 5px #010102;
  }
  .mail-us:hover{
-  color: rgba(255, 149, 0, 0.97);
+  color:rgb(0, 12, 147)
 }
 .copyright{
-  color: white;
+  color: rgb(9, 9, 9);
   font-size: 150px;
 }
 .copyright:hover{
-  color:rgba(245, 126, 14, 0.97);
+  color:rgb(0, 12, 147)
+}
+
+.home {
+  background-image: url(../assets/images/home5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: calc(100vh - 71px);
+  position: relative;
+}
+.py-5 {
+  padding-top: 3rem!important;
+  padding-bottom: 3rem!important;
+}
+.align-items-center {
+  align-items: center!important;
+}
+.d-flex {
+  display: flex!important;
+}
+section {
+  border-bottom: var(--border-color);
+}
+// .home video {
+
+//   position: absolute;
+//   z-index: 0;
+//   object-fit: cover;
+//   width: 100%;
+//   height: 50%;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   /* z-index: 9999999999; */
+// }
+video {
+  position: relative;
+  width: 100%;
+  video,
+  iframe {
+    // width: 100vw;
+    // height:250px;
+    // object-fit: cover;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* Ratio 16:9 pour la hauteur proportionnelle à la largeur */
+  object-fit: cover;
+  }}
+
+html:not(.no-js) [data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;}
+
+.home h1 {
+  font-size: 3.4rem;
+}
+.home_text {
+  color: var(--main-color);
+}
+.text-info {
+  position: absolute;
+  font-size: 3.4rem;
+
+  z-index: 1;
+  color:black!important;
+}
+
+.my-2{
+  margin-top: 0.5rem!important;
+  margin-bottom: 0.5rem!important;
+  color :black
+}
+
+.my-3 {
+  margin-top: 1rem!important;
+  margin-bottom: 1rem!important;}
+  .butn {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color:white;
+    top:80%;
+    left:80%;
+    color: black;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    text-decoration: none;}
+
+  body[data-aos-easing=ease] [data-aos] {
+    transition-timing-function: ease;
 }
