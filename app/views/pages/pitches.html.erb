@@ -1,0 +1,42 @@
+require 'erb'
+pitches = [
+  { image: 'c:\Users\USER\Downloads\Ginga.jpg', title: 'Pitch 1', description: '"Le terrain Ginga offre une expérience unique, alliant nature et détente. Niché dans un environnement paisible.' },
+  { image: 'c:\Users\USER\Downloads\atlantique.jpg', title: 'Pitch 2', description: ' Découvrez la beauté de la côte sur le terrain Atlantique, votre destination par excellence.' },
+  { image: 'c:\Users\USER\Downloads\city foot.jpg', title: 'Pitch 3', description: 'City Foot offre une expérience de jeu urbain dynamique au cœur de la ville. Avec des terrains de football modernes et bien entretenus.' },
+  { image: 'c:\Users\USER\Downloads\Arena.jpg', title: 'Pitch 4', description: 'Découvrez un lieu polyvalent qui célèbre la vie en plein air dans un cadre urbain durable à Arena Ville Verte.' }
+]
+template = <<~HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Listings</title>
+    <style>
+        .pitch {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+        .pitch img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pitch Listings Available</h1>
+    <% pitches.each do |pitch| %>
+        <div class="pitch">
+            <img src="<%= pitch[:image] %>" alt="<%= pitch[:title] %>">
+            <h2><%= pitch[:title] %></h2>
+            <p><%= pitch[:description] %></p>
+            <button>Reserve</button>
+        </div>
+    <% end %>
+</body>
+</html>
+HTML
+renderer = ERB.new(template)
+puts renderer.result(binding)
