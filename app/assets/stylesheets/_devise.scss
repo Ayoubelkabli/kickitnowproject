@@ -1,0 +1,50 @@
+// app/assets/stylesheets/devise.scss
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+
+  .form {
+    margin-top: 200px;
+    border-radius: 8px; /* Border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #5460de;
+
+    .form-inputs {
+      margin-bottom: 20px;
+
+
+      input {
+        margin: 0 auto;
+        align-items: center;
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    }
+
+    .form-actions {
+      text-align: center;
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
