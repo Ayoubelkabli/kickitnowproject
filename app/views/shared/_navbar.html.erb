@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <%# if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Pitches", "#", class: "nav-link" %>
@@ -24,11 +24,11 @@
             <%= link_to "About Us", "#", class: "nav-link" %>
           </li>
            <li class="auth">
-           <%= link_to "Sign Up", "#", class: "btn  btn-sucsess" %>
+           <%= link_to "Sign Up", new_user_registration_path, class: "btn  btn-sucsess" %>
 
           </li>
            <li class="auth">
-           <%= link_to "Login", "#", class: "btn  btn-sucsess" %>
+           <%= link_to "Login", user_session_path, class: "btn  btn-sucsess" %>
            </li>
            <div class="form-check form-switch">
   <label class="form-check-label" for="lightSwitch"> </label>
