@@ -1,9 +1,8 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+
+Stade.destroy_all
+
+Stade.create(name: "Arena City",desc: "Explore a versatile place that celebrates outdoor living in a sustainable urban setting ", img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1706190952/ARENA_4_bwngg4.jpg")
+Stade.create(name: "Atlantic Club",desc: "Discover the beauty of the coast at Atlantic Club, your ultimate destination.", img:  "https://res.cloudinary.com/dw39u26vq/image/upload/v1706181376/atlantique_hrn3uk.jpg")
+Stade.create(name: "Ginga Sport",desc: "Ginga Sport offers a unique experience, combining nature and relaxation.", img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1706191582/ginga_2_esutlg.jpg")
+
+Stade.create(name: "City foot",desc: "City Foot offers a dynamic urban gaming experience in the heart of the city. With modern and well-maintained football fields.", img: "https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg")

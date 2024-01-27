@@ -1,71 +1,28 @@
-<%# <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
-  </head>
-<body>
 
-<div class="container">
+
+
+ <div class="container-index">
   <div class="card-container">
+<%  @pitches.each do |stade| %>
     <div class="custom-card">
-      <img src="https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">City Foot</h3>
-        <p class="card-text">City Foot offers a dynamic urban gaming experience in the heart of the city. With modern and well-maintained football fields.</p>
-        <a href="/pitches" class="btn btn-primary book-now">Book Now</a>
 
-      </div>
-    </div>
-    <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706190952/ARENA_4_bwngg4.jpg
-" alt="arena" class="card-img-top">
+      <img src="<%= stade.img %>" alt="card" class="card-img-top">
       <div class="card-body">
-        <h3 class="card-title">Arena Green City</h3>
-        <p class="card-text">Explore a versatile place that celebrates outdoor living in a sustainable urban setting at Arena Green City.</p>
-      <a href="/pitches" class="btn btn-primary book-now">Book Now</a>
-      </div>
-    </div>
-    <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706181312/Ginga_ljnjv6.jpg" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">Ginga Sport</h3>
-        <p class="card-text">Ginga Sport offers a unique experience, combining nature and relaxation. Nestled in a peaceful environment.</p>
-        <a href="/pitches" class="btn btn-primary book-now">Book Now</a>
-      </div>
-    </div>
-    <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706181376/atlantique_hrn3uk.jpg" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">Atlantic Club</h3>
-        <p class="card-text">Discover the beauty of the coast at Atlantic Club, your ultimate destination.</p>
-        <a href="/pitches" class="btn btn-primary book-now">Book Now</a>
-      </div>
-    </div>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <h3 class="card-title"><%= stade.name %></h3>
+        <p class="card-text"><%= stade.desc %></p>
+          <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
+            <label for="date">Date:</label>
 
+            <form action="/bookings" method="post">
+              <input type="datetime-local" id="date" name="booking[date]" >
+              <input type="hidden" id="idstade" value="<%= stade.id %>" name="booking[stade_id]" >
+              <input type="submit" value="Book now" class="btn btn-primary" >
+            </form>
+          </div>
+       </div>
+     </div>
+<% end %>
 
-</body>
-</html> %>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  </head>
-<body>
-<div class="container">
-  <div class="card-container">
-    <div class="custom-card">
       <img src="https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg" alt="card" class="card-img-top">
       <div class="card-body">
         <h3 class="card-title">City Foot</h3>
@@ -126,13 +83,6 @@
    <br>
   <%# <button id="booking-now">Booking Now</button> %>
   <a href="/pitches" class="btn btn-primary">Book Now</a>
+
 </div>
-      </div>
-    </div>
-  </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
