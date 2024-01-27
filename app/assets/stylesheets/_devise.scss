@@ -10,10 +10,14 @@
   }
 
   .form {
-    margin-top: 200px;
-    border-radius: 8px; /* Border radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #5460de;
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
 
     .form-inputs {
       margin-bottom: 20px;
