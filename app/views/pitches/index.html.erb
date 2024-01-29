@@ -9,7 +9,7 @@
       <img src="<%= stade.img %>" alt="card" class="card-img-top">
       <div class="card-body">
         <h3 class="card-title"><%= stade.name %></h3>
-        <p class="card-text"><%= stade.des %></p>
+        <p class="card-text"><%= stade.desc %></p>
           <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
             <label for="date">Date:</label>
 
@@ -23,66 +23,4 @@
      </div>
 <% end %>
 
-      <img src="https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">City Foot</h3>
-        <p class="card-text">City Foot offers a dynamic urban gaming experience in the heart of the city.</p>
-         <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Book Now</a>
-</div>
-      </div>
-    </div>
-    <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706190952/ARENA_4_bwngg4.jpg
-" alt="arena" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">Arena City</h3>
-        <p class="card-text">Explore a versatile place that celebrates outdoor living in a sustainable urban setting  </p>
-         <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Book Now</a>
-</div>
-      </div>
-    </div>
-    <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706191582/ginga_2_esutlg.jpg
-" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">Ginga Sport</h3>
-        <p class="card-text">Ginga Sport offers a unique experience, combining nature and relaxation.</p>
-         <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Booking Now</a>
-</div>
-      </div>
-    </div>
-    <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706181376/atlantique_hrn3uk.jpg" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">Atlantic Club</h3>
-        <p class="card-text">Discover the beauty of the coast at Atlantic Club, your ultimate destination.</p>
-        <%# <a href="/pitches" class="btn btn-primary book-now'">book-now</a> %>
-        <!-- Ajouter l'attribut data-controller et data-action pour connecter le contrôleur Stimulus -->
-   <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Book Now</a>
 
-</div>
-</div>

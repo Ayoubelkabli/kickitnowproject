@@ -1,6 +1,10 @@
 class AddImgAndDesToStades < ActiveRecord::Migration[7.1]
   def change
-    add_column :stades, :img, :string
-    add_column :stades, :des, :text
+    create_table :stades do |t|
+      t.string :name
+      t.string :desc
+      t.string :img
+
+      t.timestamps
   end
 end
