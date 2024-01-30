@@ -1,41 +1,12 @@
 
-<<<<<<< HEAD
-<div class="card-container">
-<div class="card">
-  <img src="https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg" alt="card">
-  <div class="card-content">
-    <h3>City Foot</h3>
-    <p> City Foot Stade provides an unforgettable experience for those who share a love for football. It's more than just a venue; it's a place where the excitement of the sport unites communities and fosters a sense of pride in the rich football culture of Morocco.</p>
-    <a href=" "class="btn">Booking Now </a>
-      <%# <%= link_to "Booking Now", pitches_path(Stade.name), class: "btn btn-booking" %>
-      <%# <%= link_to "Voir Détails", pitches_path(Stade.name), class: "btn btn-details" %>
-    <%# </div> %>
-  <%# </div> %>
-
-
-</div>
-</div>
-<div class="card">
-  <img src="https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg" alt="card">
-  <div class="card-content">
-    <h3>City Foot</h3>
-    <p> City Foot Stade provides an unforgettable experience for those who share a love for football. It's more than just a venue; it's a place where the excitement of the sport unites communities and fosters a sense of pride in the rich football culture of Morocco.</p>
-    <a href=" "class="btn">Booking Now </a>
-      <%# <%= link_to "Booking Now", pitches_path(Stade.name), class: "btn btn-booking" %>
-      <%# <%= link_to "Voir Détails", pitches_path(Stade.name), class: "btn btn-details" %>
-    <%# </div> %>
-  <%# </div> %>
-</div>
-</div>
-=======
->>>>>>> b6045f6753608239638d911c16ea9ec62a675d58
 
 
  <div class="container-index">
-  <div class="card-container">
-<%  @pitches.each do |stade| %>
-    <div class="custom-card">
 
+
+<div class="card-container">
+    <div class="custom-card">
+<%  @pitches.each do |stade| %>
       <img src="<%= stade.img %>" alt="card" class="card-img-top">
       <div class="card-body">
         <h3 class="card-title"><%= stade.name %></h3>
@@ -114,10 +85,9 @@
   <%# <button id="booking-now">Booking Now</button> %>
   <a href="/pitches" class="btn btn-primary">Book Now</a>
 
+  </div>
+  </div>
 </div>
 </div>
-
 creat an alert for booking bottom
 <%# <div class="alert alert-success alert-dismissible fade show" role="alert"> %>
-
-
