@@ -3,9 +3,4 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
-// app/javascript/application.js
-
-// ...
-import './mode';
-import 'stylesheets/application.scss'; // Import your styles if needed
-import "@hotwired/turbo-rails";
+// import "app/javascript/application.js"

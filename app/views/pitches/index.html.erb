@@ -1,73 +1,64 @@
-
-
-
- <div class="container-index">
-
-
-<div class="card-container">
+<div class="container-index"  data-controller="alert-booking">
+  <div class="card-container">
     <div class="custom-card">
-<%  @pitches.each do |stade| %>
-      <img src="<%= stade.img %>" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title"><%= stade.name %></h3>
-        <p class="card-text"><%= stade.desc %></p>
+      <% @pitches.each do |stade| %>
+        <img src="<%= stade.img %>" alt="card" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title"><%= stade.name %></h3>
+          <p class="card-text"><%= stade.desc %></p>
           <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
             <label for="date">Date:</label>
-
             <form action="/bookings" method="post">
-              <input type="datetime-local" id="date" name="booking[date]" >
-              <input type="hidden" id="idstade" value="<%= stade.id %>" name="booking[stade_id]" >
-              <input type="submit" value="Book now" class="btn btn-primary" >
+              <input type="datetime-local" id="date" name="booking[date]">
+              <input type="hidden" id="idstade" value="<%= stade.id %>" name="booking[stade_id]">
+              <input type="submit" value="Book now" class="btn btn-primary">
             </form>
           </div>
-       </div>
-     </div>
-<% end %>
+        </div>
+      <% end %>
 
       <img src="https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg" alt="card" class="card-img-top">
-      <div class="card-body">
+      <div class="card-body" >
         <h3 class="card-title">City Foot</h3>
         <p class="card-text">City Foot offers a dynamic urban gaming experience in the heart of the city.</p>
-         <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Book Now</a>
-</div>
+        <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
+          <label for="date">Date:</label>
+          <input type="datetime-local" id="date" name="date" data-target="reservation.date">
+          <br>
+          <br>
+          <%# <button id="booking-now">Booking Now</button> %>
+          <a href="/pitches" class="btn btn-primary">Book Now</a>
+        </div>
       </div>
     </div>
     <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706190952/ARENA_4_bwngg4.jpg
-" alt="arena" class="card-img-top">
+      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706190952/ARENA_4_bwngg4.jpg" alt="arena" class="card-img-top">
       <div class="card-body">
         <h3 class="card-title">Arena City</h3>
-        <p class="card-text">Explore a versatile place that celebrates outdoor living in a sustainable urban setting  </p>
-         <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Book Now</a>
-</div>
+        <p class="card-text">Explore a versatile place that celebrates outdoor living in a sustainable urban setting</p>
+        <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
+          <label for="date">Date:</label>
+          <input type="datetime-local" id="date" name="date" data-target="reservation.date">
+          <br>
+          <br>
+          <%# <button id="booking-now">Booking Now</button> %>
+          <a href="/pitches" class="btn btn-primary">Book Now</a>
+        </div>
       </div>
     </div>
     <div class="custom-card">
-      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706191582/ginga_2_esutlg.jpg
-" alt="card" class="card-img-top">
+      <img src="https://res.cloudinary.com/dw39u26vq/image/upload/v1706191582/ginga_2_esutlg.jpg" alt="card" class="card-img-top">
       <div class="card-body">
         <h3 class="card-title">Ginga Sport</h3>
         <p class="card-text">Ginga Sport offers a unique experience, combining nature and relaxation.</p>
-         <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Booking Now</a>
-</div>
+        <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
+          <label for="date">Date:</label>
+          <input type="datetime-local" id="date" name="date" data-target="reservation.date">
+          <br>
+          <br>
+          <%# <button id="booking-now">Booking Now</button> %>
+          <a href="/pitches" class="btn btn-primary">Booking Now</a>
+        </div>
       </div>
     </div>
     <div class="custom-card">
@@ -77,17 +68,16 @@
         <p class="card-text">Discover the beauty of the coast at Atlantic Club, your ultimate destination.</p>
         <%# <a href="/pitches" class="btn btn-primary book-now'">book-now</a> %>
         <!-- Ajouter l'attribut data-controller et data-action pour connecter le contrôleur Stimulus -->
-   <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
-  <label for="date">Date:</label>
-  <input type="datetime-local" id="date" name="date" data-target="reservation.date">
-   <br>
-   <br>
-  <%# <button id="booking-now">Booking Now</button> %>
-  <a href="/pitches" class="btn btn-primary">Book Now</a>
-
-  </div>
+        <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
+          <label for="date">Date:</label>
+          <input type="datetime-local" id="date" name="date" data-target="reservation.date">
+          <br>
+          <br>
+          <%# <button id="booking-now">Booking Now</button> %>
+          <a href="/pitches" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-creat an alert for booking bottom
 <%# <div class="alert alert-success alert-dismissible fade show" role="alert"> %>
