@@ -1060,7 +1060,7 @@ i {
 }
 
 .glitch {
-  color: rgb(223, 191, 191);
+  color: white;
   position: relative;
   font-size: 9vw;
   // margin: 70px 200px;
@@ -1155,7 +1155,7 @@ i {
 
 .glow {
   @extend .glitch;
-  text-shadow: 0 0 1000px rgb(223, 191, 191);
+  text-shadow: 0 0 1000px wrgb(223, 191, 191);
   color: transparent;
   position: absolute;
   top: 0;

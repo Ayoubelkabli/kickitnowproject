@@ -1,4 +1,4 @@
-class AddImgAndDesToStades < ActiveRecord::Migration[7.1]
+class CreateStades < ActiveRecord::Migration[7.1]
   def change
     create_table :stades do |t|
       t.string :name
@@ -6,5 +6,6 @@ class AddImgAndDesToStades < ActiveRecord::Migration[7.1]
       t.string :img
 
       t.timestamps
+    end
   end
 end
