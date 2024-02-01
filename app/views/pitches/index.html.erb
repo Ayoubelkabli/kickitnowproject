@@ -10,7 +10,7 @@
       <div class="card-body">
         <h3 class="card-title"><%= stade.name %></h3>
         <p class="card-text"><%= stade.desc %></p>
-          <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
+          <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit notification#show">
             <label for="date">Date:</label>
 
             <form action="/bookings" method="post">
@@ -22,5 +22,3 @@
        </div>
      </div>
 <% end %>
-
-

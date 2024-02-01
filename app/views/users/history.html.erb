@@ -1,0 +1,11 @@
+<h1> the booking history for <%= @user.username %></h1>
+<% if @bookings.present? %>
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li>
+        <%= booking.stade.name %> - <%= booking.date %>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No bookings found</p>
+<% end %>
