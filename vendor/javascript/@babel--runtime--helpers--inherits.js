@@ -1,0 +1,2 @@
+import e from"./setPrototypeOf.js";var t={};var r=e;function _inherits(e,t){if(typeof t!=="function"&&t!==null)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:true,configurable:true}});Object.defineProperty(e,"prototype",{writable:false});t&&r(e,t)}t=_inherits,t.__esModule=true,t.default=t;var o=t;const u=t.__esModule;export{u as __esModule,o as default};
+

@@ -1,21 +1,22 @@
-<div class="container-index">
+<div class="container-index"  data-controller="alert" data-controller="hello">
   <div class="card-container">
-<%  @pitches.each do |stade| %>
+      <% @pitches.each do |stade| %>
     <div class="custom-card">
-      <img src="<%= stade.img %>" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title"><%= stade.name %></h3>
-        <p class="card-text"><%= stade.desc %></p>
-          <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit">
+        <img src="<%= stade.img %>" alt="card" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title"><%= stade.name %></h3>
+          <p class="card-text"><%= stade.desc %></p>
+          <div id="booking-form" >
             <label for="date">Date:</label>
             <form action="/bookings" method="post">
-              <input type="datetime-local" id="date" name="booking[date]" >
-              <input type="hidden" id="idstade" value="<%= stade.id %>" name="booking[stade_id]" >
-              <input type="submit" value="Book now" class="btn btn-primary" >
+              <input type="datetime-local" id="date" name="booking[date]">
+              <input type="hidden" id="idstade" value="<%= stade.id %>" name="booking[stade_id]">
+              <input type="submit" value="Book now" class="btn btn-primary">
             </form>
           </div>
-       </div>
-     </div>
-<% end %>
+        </div>
+    </div>
+      <% end %>
+  </div>
 </div>
-</div>
+<%# <div class="alert alert-success alert-dismissible fade show" role="alert"> %>

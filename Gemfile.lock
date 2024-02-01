@@ -159,7 +159,6 @@ GEM
     mini_mime (1.1.5)
     minitest (5.21.2)
     msgpack (1.7.2)
-    multi_json (1.15.0)
     mutex_m (0.2.0)
     net-imap (0.4.9.1)
       date
@@ -184,9 +183,6 @@ GEM
     nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    paypal-sdk-rest (1.7.5)
-      multi_json (~> 1.0)
-      xml-simple
     pg (1.5.4)
     popper_js (2.11.8)
     psych (5.1.2)
@@ -195,7 +191,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
-    rack (3.0.8)
+    rack (3.0.9)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -287,8 +283,6 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    xml-simple (1.1.9)
-      rexml
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.12)
@@ -313,7 +307,6 @@ DEPENDENCIES
   font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder
-  paypal-sdk-rest
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.3)
