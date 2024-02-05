@@ -1,11 +1,12 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
-import "controllers"
 import "@popperjs/core"
 import "bootstrap"
-// app/javascript/application.js
 
-// ...
+import './controllers';
 import './mode';
+<<<<<<< HEAD
 import "@hotwired/turbo-rails";
 import "@rails/actioncable"
+=======
+>>>>>>> b1bc7fc (add a new home page)
