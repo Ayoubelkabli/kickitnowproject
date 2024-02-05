@@ -171,9 +171,6 @@ i {
     // }
     &:hover {
       animation: 0.5s bounce ease-in-out;
-
-<<<<<<< HEAD
-
 }
 .auth{
   color: black
@@ -187,26 +184,7 @@ i {
 }
 .ok{
   color:rgb(0, 0, 0)
-
-      // @keyframes bounce {
-      //   10% {
-      //     transform: translateY(-10px);
-      //   }
-      //   30% {
-      //     margin-top: translateY(10px);
-      //   }
-      //   50% {
-      //     margin-top: translateY(-20px);
-      //   }
-      //   70% {
-      //     margin-top: translateY(10px);
-      //   }
-      //   100% {
-      //     margin-top: translateY(0);
-      //   }
-      // }
-=======
-      @keyframes bounce {
+    /*   @keyframes bounce {
         10% {
           transform: translateY(-10px);
         }
@@ -223,8 +201,7 @@ i {
           margin-top: translateY(0);
         }
       }
->>>>>>> b6045f6753608239638d911c16ea9ec62a675d58
-
+ */
 
     }
     &__title {
