@@ -1,5 +1,17 @@
 // app/assets/stylesheets/devise.scss
 
+
+#devise {
+  width: 100%;
+  height: auto;
+
+  a {
+    color: #ffffffda;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
 .container {
   max-width: 400px;
   margin: 40px auto;
@@ -11,6 +23,10 @@
   }
 
   .form {
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/soccer-ball-on-a-soccer-field-green-grass-football-pitch-mateusz-dembowiak.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -73,4 +89,5 @@
       border-radius: 8px;
     }
   }
+}
 }
