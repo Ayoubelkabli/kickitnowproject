@@ -1,0 +1,96 @@
+// .history {
+//   &__title {
+//     font-size: 36px;
+//     margin: 48px;
+//     font-family: Academy Engraved LET;
+//     margin: 0;
+//   }
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   padding: 48px 24px;
+//   background-color: aliceblue;
+//   .history__card__container {
+//     height: auto !important;
+//     width: 80%;
+//   }
+//   .history__card {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 24px;
+//     li {
+//       list-style: none;
+//       // text-align: center;
+//       span {
+//         font-weight: 500;
+//         color: lightseagreen;
+//       }
+//     }
+//   }
+// }
+
+// body {
+//   background-color: aliceblue;
+// }
+
+
+// Base styling
+$primary-color: lightseagreen;
+$background-color: aliceblue;
+
+.history {
+  &__title {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'Academy Engraved LET';
+    color: $primary-color;
+    text-align: center;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 48px 24px;
+  background-color: $background-color;
+  border-bottom: 2px solid $primary-color;
+
+  &__card__container {
+    width: 80%;
+    margin-top: 24px;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: auto !important;
+  }
+
+  &__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    li {
+      list-style: none;
+      padding: 12px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+      span {
+        font-weight: 500;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: #333;
+}

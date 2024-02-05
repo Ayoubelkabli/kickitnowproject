@@ -9,8 +9,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    if @booking.save!
-      redirect_to root_path, notice: 'Booking created successfully.'
+    if @booking.save
+      redirect_to root_path, notice: 'Woo-hoo! Your booking is a go!.'
+    else
+      redirect_to root_path, alert: 'Oh snap! The pitch is partying with someone else.'
+
     end
   end
 
