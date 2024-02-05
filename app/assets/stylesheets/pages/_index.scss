@@ -6,6 +6,9 @@
 .card-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 48px 16px 24px 16px;
+
 }
 .custom-card {
   width: 23%; /* Adjust the width as needed */
@@ -24,6 +27,10 @@
   height: 150px;
 
 }
+.card-body {
+  padding:16px
+
+}
 
 .container-index {
 width: 100%;
@@ -40,3 +47,12 @@ margin-top: 34px;
 }
 
 @import "home";
+@import "history";
+
+
+.form-check{
+  padding-left: 0 !important;
+}
+.form-check-label{
+  margin-right: 8px;
+}
