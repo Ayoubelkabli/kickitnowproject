@@ -18,3 +18,5 @@ pin "@babel/runtime/helpers/inherits", to: "@babel--runtime--helpers--inherits.j
 pin "@babel/runtime/helpers/interopRequireDefault", to: "@babel--runtime--helpers--interopRequireDefault.js" # @7.23.9
 pin "@babel/runtime/helpers/possibleConstructorReturn", to: "@babel--runtime--helpers--possibleConstructorReturn.js" # @7.23.9
 pin "stimulus" # @2.0.0
+
+
