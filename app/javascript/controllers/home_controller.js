@@ -9,8 +9,8 @@ export default class extends Controller {
 
     let carouselDom = document.querySelector('.carousel');
     let SliderDom = carouselDom.querySelector('.carousel .list');
-    let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
-    console.log(thumbnailBorderDom);
+    let thumbnailBorderDom = document.querySelector('.thumbnail');
+
     let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
     let timeDom = document.querySelector('.carousel .time');
 
@@ -31,10 +31,11 @@ export default class extends Controller {
     }, timeAutoNext)
     function showSlider(type){
         let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
-        let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+        let thumbnailItemsDom = document.querySelectorAll('.thumbnail .item');
 
         if(type === 'next'){
             SliderDom.appendChild(SliderItemsDom[0]);
+            console.log(thumbnailItemsDom)
             thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
             carouselDom.classList.add('next');
         }else{

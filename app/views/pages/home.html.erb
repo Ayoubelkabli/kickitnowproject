@@ -1,9 +1,9 @@
 
-
+<!--
       <header>
-              <nav>
+              <nav style="color:black">
 
-                        <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+                        <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" >
                           <div class="container-fluid">
                                 <%= link_to "#", class: "navbar-brand" do %>
 
@@ -21,24 +21,28 @@
 
 
                               <ul class="navbar-nav me-auto">
-                              <li class="nav-item">
-                                    <%= link_to "Home", "/", class: "nav-link" %>
-                              </li>
+                                <li class="nav-item">
+                                      <%= link_to "Home", "/", class: "nav-link" %>
+                                </li>
                                 <% if user_signed_in? %>
 
                                   <li class="nav-item">
                                     <%= link_to "Pitches", pitches_path, class: "nav-link" %>
                                     <li class="nav-item">
                                     <%= link_to "My bookings", history_path, class: "nav-link" %>
+
+                                    <li class="nav-item">
+                                     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                                     </li>
                                   </li>
 
 
-                                  <li class="nav-item dropdown">
-                                    <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhOzMlVmaGmerJG7MjWP6iu2Spi-Hwg3aow&usqp=CAU", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                                    </div>
-                                  </li>
+                                 <li class="nav-item dropdown">
+            <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhOzMlVmaGmerJG7MjWP6iu2Spi-Hwg3aow&usqp=CAU", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
                                 <% else %>
                                   <li class="nav-item">
                                     <%= link_to "Login", new_user_session_path, class: "nav-link" %>
@@ -53,6 +57,8 @@
                         </div>
               </nav>
       </header>
+
+      -->
 
     <!-- carousel -->
     <div class="carousel" data-controller="home">
@@ -69,9 +75,10 @@
                      KickItNow is your go-to sports facility booking platform, providing unparalleled access to top-quality pitches and venues. We seamlessly connect athletes, teams, and fitness enthusiasts with diverse sports facilities, ensuring a convenient and efficient booking experience. Whether you're a pro athlete or someone seeking an active lifestyle, KickItNow is designed for you. Join us to discover, book, and elevate your sports experience
 
                     </div>
-                    <div class="buttons">
-                        <button >SEE MORE</button>
-                        <button  href="/pitches">BOOK NOW</button>
+                    <div class="buttons ">
+
+                        <button><a href="">SEE MORE </a></button>
+                       <button ><a href="/pitches">BOOK NOW</a></button>
                     </div>
                 </div>
             </div>
@@ -83,12 +90,13 @@
                     <div class="topic">Now</div>
                     <div class="des">
 
-                            KickItNow is your go-to sports facility booking platform, providing unparalleled access to top-quality pitches and venues. We seamlessly connect athletes, teams, and fitness enthusiasts with diverse sports facilities, ensuring a convenient and efficient booking experience. Whether you're a pro athlete or someone seeking an active lifestyle, KickItNow is designed for you. Join us to discover, book, and elevate your sports experience
+                        Discover the beauty of the coast at Atlantic Club, your ultimate destination
 
                     </div>
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button href="/pitches">BOOK NOW</button>
+                     <div class="buttons ">
+
+                        <button><a href="">SEE MORE </a></button>
+                       <button ><a href="/pitches">BOOK NOW</a></button>
                     </div>
                 </div>
             </div>
@@ -100,7 +108,7 @@
                     <div class="topic">Now</div>
                     <div class="des">
 
-                          KickItNow is your go-to sports facility booking platform, providing unparalleled access to top-quality pitches and venues. We seamlessly connect athletes, teams, and fitness enthusiasts with diverse sports facilities, ensuring a convenient and efficient booking experience. Whether you're a pro athlete or someone seeking an active lifestyle, KickItNow is designed for you. Join us to discover, book, and elevate your sports experience
+Ginga Sport offers a unique experience, combining nature and relaxation. Nestled in a peaceful environment                    </div>
 
                     </div>
                     <div class="buttons">
@@ -117,11 +125,12 @@
                     <div class="topic">Now</div>
                     <div class="des">
 
-
+City Foot offers a dynamic urban gaming experience in the heart of the city. With modern and well-maintained football fields.
                                             </div>
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button href="../pitches">BOOK NOW</button>
+                     <div class="buttons ">
+
+                        <button><a href="">SEE MORE </a></button>
+                       <button ><a href="/pitches">BOOK NOW</a></button>
                     </div>
                 </div>
             </div>
@@ -172,6 +181,7 @@ Ginga Sport offers a unique experience, combining nature and relaxation. Nestled
         <div class="time"></div>
     </div>
 </div>
+<br>
 
 <section class="testimonies">
                 <h2>Testimonials</h2>
@@ -179,8 +189,8 @@ Ginga Sport offers a unique experience, combining nature and relaxation. Nestled
                 <div class="card">
                     <div class="card__title">
                       <img src="images/test2.jpg">
-                      <p>Anas</p>
-                    </div>
+                      <p>Anas</p> <p style="color:yellow">★★★★★</p>
+                   </div>
                     <div class="card__body">
                       "KickItNow has revolutionized how I book soccer pitches! The platform is so easy to use, and I can quickly secure a spot for my weekly matches with friends. The variety of high-quality pitches available has made every game a memorable experience. Thanks, KickItNow, for making my soccer passion even more enjoyable!"
                     </div>
@@ -189,7 +199,7 @@ Ginga Sport offers a unique experience, combining nature and relaxation. Nestled
 
                     <div class="card__title">
                       <img src="images/test1.jpg">
-                      <p>Ayoub</p>
+                      <p>Ayoub</p>  <p style="color:yellow">★★★</p>
                     </div>
                     <div class="card__body">
                       "As a team captain, finding the right pitch for our training sessions is crucial. KickItNow has become our go-to solution. The platform's flexibility in booking, combined with the excellent facilities offered by their partner locations, has greatly contributed to our team's success. KickItNow is a game-changer for any serious soccer team!"
@@ -198,11 +208,10 @@ Ginga Sport offers a unique experience, combining nature and relaxation. Nestled
                 <div class="card">
                     <div class="card__title">
                       <img src="images/test3.jpg">
-                      <p>Mouad</p>
+                      <p>Mouad</p>  <p style="color:yellow">★</p>
                     </div>
                     <div class="card__body">
                       "Being a soccer enthusiast, KickItNow has become my virtual soccer companion. The platform not only provides hassle-free pitch bookings but also connects me with a community of fellow soccer lovers. I've discovered new pitches, made new friends, and elevated my soccer experience. KickItNow truly understands the pulse of the soccer community."
                     </div>
                 </div>
-
-              </section>
+</section>
