@@ -7,5 +7,5 @@ import "bootstrap"
 
 // ...
 import './mode';
-import 'stylesheets/application.scss'; // Import your styles if needed
 import "@hotwired/turbo-rails";
+import "@rails/actioncable"
