@@ -1,19 +1,18 @@
 .logo__container {
   height: 40px;
-  width: 200px;
+  // width: 200px;
   img {
-    width: 90px  !important;
-    object-fit: cover  !important;
-    margin-top: -22px  !important;
-    margin-left: -10px  !important;
+    width: 90px !important;
+    object-fit: cover !important;
+    margin-top: -22px !important;
+    margin-left: -10px !important;
   }
 }
 .nav-link {
   font-family: Poppins;
   font-weight: 800 !important;
   color: white !important;
-
-
+  font-size: 18px;
 }
 .dropdown {
   margin-left: 24px;

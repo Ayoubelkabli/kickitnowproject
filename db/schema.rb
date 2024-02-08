@@ -30,7 +30,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_162736) do
     t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "reserved"
     t.integer "capacity"
     t.string "surface_type"
     t.string "availability"
