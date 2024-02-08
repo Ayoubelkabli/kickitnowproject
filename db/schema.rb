@@ -46,6 +46,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_153152) do
     t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "reserved"
+    t.integer "capacity"
+    t.string "surface_type"
+    t.string "availability"
+    t.string "map_url"
   end
 
   create_table "users", force: :cascade do |t|
