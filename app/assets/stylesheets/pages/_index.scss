@@ -1,58 +1,146 @@
-// Import page-specific CSS files here.
-
-// body{
-//   overflow-x: hidden
-// }
 .card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 48px 16px 24px 16px;
+  background-color: white;
+  min-height: 100vh;
 
 }
+
 .custom-card {
-  width: 23%; /* Adjust the width as needed */
+  width: 23%;
   margin-bottom: 20px;
-  border: 1px solid #ddd; /* Border for separation */
-  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 665px;
+  .card-body{
+    perspective: 1000px;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    transition: transform 800ms;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+
+    &.turnfront {
+      transform: rotateY(180deg) !important;
+    }
+    &.turnback {
+      transform: rotateY(360deg) !important;
+    }
+    &.back{
+      transform: rotateY(180deg);
+    }
+    &.front{
+      transform: rotateY(0deg);
+    }
+
+  }
+  .capacity{
+    position: absolute;
+    top:10px;
+    left:10px;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.544);
+    padding: 4px 12px;
+    border-radius: 24px;
+    i {
+
+      color: #fff;
+    }
+  }
 }
-.custom-card:hover {
-  transform: scale(1.05); /* Scale up on hover for a subtle zoom effect */
-}
+
+
 .card-img-top {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 220px;
+  object-fit: cover;
 
 }
-.card-body {
-  padding:16px
 
+.card-body {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
 }
 
 .container-index {
-width: 100%;
-padding-right: 15px;
-padding-left: 15px;
-margin-right: auto;
-margin-left: auto;
-margin-top: 34px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 34px;
 }
 
-.btn.btn-primary.book-now {
+.btn-primary {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
+  background-color: seagreen;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
+.btn.btn-primary.book-now:hover {
+  background-color: #3fa56b;
+}
+
+#booking-form {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#booking-form label {
+  margin-bottom: 8px;
+}
+
+#booking-form input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  border-block-color: seagreen;
+border-radius: 10px;
+}
+
+#booking-form input[type="submit"] {
+  background-color: seagreen;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+#booking-form input[type="submit"]:hover {
+  background-color: seagreen
+}
+
+.card-title {
+font-weight: 800
+}
+
+p {
+  color: gray;
+}
 @import "home";
 @import "history";
-
-
-.form-check{
-  padding-left: 0 !important;
-}
-.form-check-label{
-  margin-right: 8px;
-}
+@import "aboutUs";
