@@ -2,7 +2,7 @@ Stade.destroy_all
 Stade.create(
   name: "Arena City",
   desc: "Explore a versatile place that celebrates outdoor living in a sustainable urban setting",
-  img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1706190952/ARENA_4_bwngg4.jpg",
+  img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1707316380/ciiiiiiiiiii_osnth0.jpg",
   capacity: 22,
   surface_type: "Natural Grass",
   availability: "Monday to Sunday",
@@ -11,7 +11,7 @@ Stade.create(
 Stade.create(
   name: "Atlantic Club",
   desc: "Discover the beauty of the coast at Atlantic Club, your ultimate destination.",
-  img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1706181376/atlantique_hrn3uk.jpg",
+  img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1707389066/zattttttttttttttttttttt_ub2x1c.jpg",
   capacity: 12,
   surface_type: "Artificial Turf",
   availability: "Weekends",
@@ -20,7 +20,7 @@ Stade.create(
 Stade.create(
   name: "Ginga Sport",
   desc: "Ginga Sport offers a unique experience, combining nature and relaxation.",
-  img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1706191582/ginga_2_esutlg.jpg",
+  img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1707389976/giiiixashjxbghdz_p9mej6.jpg",
   capacity: 12,
   surface_type: "Hybrid",
   availability: "Tuesday to Saturday",

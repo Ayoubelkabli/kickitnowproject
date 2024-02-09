@@ -80,62 +80,65 @@ i {
   }
 }
 
-//   .about_us {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     flex-wrap: wrap-reverse;
-//     margin: 36px 16px;
-//     border-radius: 16px;
-//     padding: 16px;
-//     box-shadow: 12px 11px 20px 2px rgba(0, 0, 0, 0.54);
-//     -webkit-box-shadow: 12px 11px 20px 2px rgba(0, 0, 0, 0.54);
-//     -moz-box-shadow: 12px 11px 20px 2px rgba(0, 0, 0, 0.54);
-//     .about {
-//       width: 48%;
-//     }
-//     h2 {
-//       font-size: 24px;
-//       margin-bottom: 16px;
-//       font-weight: 500;
-//       margin-right: 24px;
-//     }
-//     p {
-//       font-size: 16px;
-//       margin-bottom: 16px;
-//       font-weight: 300;
-//     }
-//     .image__contaire {
-//       height: 300px;
-//       width: 400px;
-//       min-width: 300px;
-//     }
-//     img {
-//       width: 100%;
-//       height: 100%;
-//       border-radius: 16px;
-//       object-fit: cover;
-//       animation-duration: 2s;
-//       animation-name: opacity;
-//       transition: 0.3s;
-//       opacity: 1;
-//       &:hover {
-//         transform: scale(1.02, 1.02);
-//       }
-//       @keyframes opacity {
-//         from {
-//           opacity: 0;
-//         }
-//         to {
-//           opacity: 1;
-//         }
-//       }
-//     }
-//   }
+  .about_us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    margin: 36px 16px;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 12px 11px 20px 2px rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: 12px 11px 20px 2px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 12px 11px 20px 2px rgba(0, 0, 0, 0.54);
+    .about {
+      width: 48%;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      font-weight: 500;
+      margin-right: 24px;
+      color: lightseagreen;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+      font-weight: 300;
+      color: #fff;
+    }
+    .image__contaire {
+      height: 300px;
+      width: 400px;
+      min-width: 300px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      animation-duration: 2s;
+      animation-name: opacity;
+      transition: 0.3s;
+      opacity: 1;
+      &:hover {
+        transform: scale(1.02, 1.02);
+      }
+      @keyframes opacity {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
 .testimonies {
   h2 {
     text-align: center;
     padding:16px 0;
+    color:lightseagreen;
   }
 }
 .card__testimonies {
@@ -164,27 +167,7 @@ i {
   // &::after {
   //   // transition: border-color 0.3s ease-in-out;
   // }
-  &:hover {
-    animation: 0.5s bounce ease-in-out;
 
-    @keyframes bounce {
-      10% {
-        transform: translateY(-10px);
-      }
-      30% {
-        margin-top: translateY(10px);
-      }
-      50% {
-        margin-top: translateY(-20px);
-      }
-      70% {
-        margin-top: translateY(10px);
-      }
-      100% {
-        margin-top: translateY(0);
-      }
-    }
-  }
   &__title {
     display: flex;
     align-items: center;
@@ -199,6 +182,7 @@ i {
     p {
       font-size: 18px;
       font-weight: 500;
+      color: #000;
     }
   }
   &__body {
@@ -362,74 +346,50 @@ i {
 }
 
 #email-btn {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  left: 20px;
-}
-.mail-us {
-  padding-top: 10px;
-  /**/
-  font-size: larger;
-  //  left: 30px;
-  top: 100px;
-  padding-bottom: 10px;
   position: fixed;
-  /**/
-  background-color: rgba(255, 255, 255, 0.925);
-  /**/
-  width: 50px;
-  /**/
-  height: 50px;
-  /**/
-  text-align: center;
-  /*=*/
-  border-radius: 50%;
-  bottom: 10px;
-  /*=*/
-  cursor: pointer;
-  display: block;
-  /**/
-  color: rgba(10, 10, 10, 0.97);
-  /**/
-  transition: all 0.4s ease-in-out;
-  z-index: 10000000;
-  /**/
-  box-shadow: 0 0 5px #010102;
-  /**/
-  display: flex !important;
-  /**/
-  justify-content: center !important;
-  /**/
-  align-items: center !important;
+  z-index: 1000;
+  left: 20px;
+  bottom: 48px;
+  .fa-headset:before {
+    content: "\f590";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
 }
+}
+
 .mail-us:hover {
   color: rgb(0, 12, 147);
 }
-#scroll-btn {
-  animation: bounce 500ms alternate infinite;
+.scroll__div {
+  animation: bounce 1s alternate infinite;
   padding-top: 12px;
   font-size: x-large;
   right: 30px;
-  transform: translateX(-10%);
+
   display: none;
 }
 .mail-us,
-#scroll-btn {
-  position: fixed;
+.scroll__div {
+
   background-color: white;
   width: 50px;
   height: 50px;
   text-align: center;
   border-radius: 50%;
-  bottom: 10px;
   cursor: pointer;
   display: block;
   color: var(--second-color);
   transition: all 0.4s ease-in-out;
   z-index: 10000000;
   box-shadow: 0 0 5px red;
+}
+.scroll__div {
+  position: fixed;
+  right: 12px;
+  bottom: 48px;
 }
 .fa-solid,
 .fas {
@@ -794,3 +754,15 @@ header a {
   font-size: 14px;
   max-width: 400px;
 }
+    @keyframes bounce {
+      10% {
+        transform: translateY(-10px);
+      }
+
+      70% {
+        margin-top: translateY(10px);
+      }
+      100% {
+        margin-top: translateY(-10);
+      }
+    }
