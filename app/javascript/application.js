@@ -5,8 +5,3 @@ import "bootstrap"
 
 import './controllers';
 import './mode';
-<<<<<<< HEAD
-import "@hotwired/turbo-rails";
-import "@rails/actioncable"
-=======
->>>>>>> b1bc7fc (add a new home page)

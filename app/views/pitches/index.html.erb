@@ -8,25 +8,6 @@
 
 <div id="pitch-container-index" class="container-index pitch-container-index">
   <div class="card-container">
-<<<<<<< HEAD
-<%  @pitches.each do |stade| %>
-    <div class="custom-card">
-      <img src="<%= stade.img %>" alt="card" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title"><%= stade.name %></h3>
-        <p class="card-text"><%= stade.desc %></p>
-          <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit notification#show">
-            <label for="date">Date:</label>
-            <form action="/bookings" method="post">
-              <input type="datetime-local" id="date" name="booking[date]" >
-              <input type="hidden" id="idstade" value="<%= stade.id %>" name="booking[stade_id]" >
-              <input type="submit" value="Book now" class="btn btn-primary" >
-            </form>
-          </div>
-       </div>
-     </div>
-<% end %>
-=======
     <% @pitches.each do |stade| %>
       <div class="custom-card" data-controller="flip">
         <p class='capacity'><strong>
@@ -60,4 +41,3 @@
     <% end %>
   </div>
 </div>
->>>>>>> 3c424d8 (fix: style)

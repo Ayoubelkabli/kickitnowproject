@@ -36,14 +36,16 @@ Stade.create(
   map_url: "https://maps.google.com/?q=33.550146802293206, -7.636363732390246"
 )
 
+Message.destroy_all
+
 puts "Destroying everything.."
 User.destroy_all
 Chatroom.destroy_all
 puts "Everything destroyed!"
 
 puts "Creating two users..."
-User.create!(email: "boris@lewagon.org", nickname: "boris", password: "password")
-User.create!(email: "sebastien@lewagon.org", nickname: "sebastien", password: "password")
+User.create!(email: "boris@lewagon.org", username: "boris", password: "password")
+User.create!(email: "sebastien@lewagon.org", username: "sebastien", password: "password")
 puts "Two users created!"
 
 puts "Creating one chatroom..."
