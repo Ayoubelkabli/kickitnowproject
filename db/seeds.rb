@@ -29,7 +29,7 @@ Stade.create(
 Stade.create(
   name: "City Foot",
   desc: "City Foot offers a dynamic urban gaming experience in the heart of the city. With modern and well-maintained football fields.",
-  img: "https://res.cloudinary.com/ddiq9sddp/image/upload/v1706104882/city-foot-5-club-de-sport-casablanca-517_ozc4sf.jpg",
+  img: "https://res.cloudinary.com/dw39u26vq/image/upload/v1707488755/2021-12-09_hygric.jpg",
   capacity: 22,
   surface_type: "Artificial Turf",
   availability: "Weekdays",
