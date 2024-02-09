@@ -102,7 +102,7 @@ i {
       color: lightseagreen;
     }
     p {
-      font-size: 16px;
+      font-size: 20px;
       margin-bottom: 16px;
       font-weight: 300;
       color: #fff;
@@ -164,6 +164,7 @@ i {
   -moz-box-shadow: 12px 11px 20px 2px rgba(0, 0, 0, 0.54);
   position: relative;
   transition: border-color 0.3s ease-in-out;
+  background-color: white;
   // &::after {
   //   // transition: border-color 0.3s ease-in-out;
   // }
@@ -477,6 +478,8 @@ header a {
 .carousel .list .item .author {
   font-weight: bold;
   letter-spacing: 10px;
+  font-size: 14px;
+
 }
 .carousel .list .item .title,
 .carousel .list .item .topic {
@@ -500,15 +503,16 @@ header a {
 }
 .carousel .list .item .buttons button {
   border: none;
-  background-color: #eee;
+  background-color: #f1683a;
   letter-spacing: 3px;
   font-family: Poppins;
   font-weight: 500;
+
 }
 .carousel .list .item .buttons button:nth-child(2) {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #eee;
+  background-color: lightseagreen;
+
+
 }
 /* thumbail */
 .thumbnail {
@@ -624,6 +628,8 @@ header a {
 }
 .carousel .list .item:nth-child(1) .content .des {
   animation-delay: 1.6s !important;
+  font-size: 20px;
+  font-weight: 800;
 }
 .carousel .list .item:nth-child(1) .content .buttons {
   animation-delay: 1.8s !important;
