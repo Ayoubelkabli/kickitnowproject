@@ -50,12 +50,12 @@
 // @import "history";
 
 
-// .form-check{
-//   padding-left: 0 !important;
-// }
-// .form-check-label{
-//   margin-right: 8px;
-// }
+.form-check{
+  padding-left: 0 !important;
+}
+.form-check-label{
+  margin-left: 8px !important;
+}
 
 
 
@@ -94,9 +94,16 @@
     }
     &.back{
       transform: rotateY(180deg);
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: none;
+      min-height: 300px;
     }
     &.front{
       transform: rotateY(0deg);
+      border: 1px solid rgba(0,0,0,.1);
+      border-top: none;
+      min-height: 300px;
     }
   }
   .capacity{
@@ -157,6 +164,8 @@
 }
 #booking-form label {
   margin-bottom: 8px;
+  color: #000;
+  font-size: 16px;
 }
 #booking-form input[type="datetime-local"] {
   width: 100%;
@@ -188,3 +197,11 @@ p {
 @import "home";
 @import "history";
 @import "aboutUs";
+
+.container-index{
+  padding: 0 !important;
+  margin-top: 0!important;
+}
+.pitches__card__title{
+  color: #000 !important;
+}

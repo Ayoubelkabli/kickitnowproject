@@ -6,7 +6,7 @@
 
 
 
-<div id="pitch-container-index" class="container-index">
+<div id="pitch-container-index" class="container-index pitch-container-index">
   <div class="card-container">
     <% @pitches.each do |stade| %>
       <div class="custom-card" data-controller="flip">
@@ -16,7 +16,7 @@
         </p>
         <img src="<%= stade.img %>" alt="card" class="card-img-top">
         <div class="card-body front"  data-flip-target="front"  >
-          <h3 class="card-title"><%= stade.name %></h3>
+          <h3 class="card-title pitches__card__title"><%= stade.name %></h3>
           <p class="card-text"><%= stade.desc %></p>
           <!-- Surface Type -->
           <p><strong><i class="fa-solid fa-water"></i></strong> <%= stade.surface_type %></p>
