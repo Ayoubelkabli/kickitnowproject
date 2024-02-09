@@ -11,16 +11,12 @@
 .nav-link {
   font-family: Poppins;
   font-weight: 800 !important;
-  color: white !important;
-
-
 }
 .dropdown {
   margin-left: 24px;
 }
 .navbar-lewagon {
   justify-content: space-between;
-  background: black;
   z-index: 2;
 }
 
@@ -30,4 +26,43 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 100%;
+}
+
+
+body.theme-dark {
+  // .nav-link {
+  //   color: white !important;
+  // }
+  .navbar-lewagon {
+    background: black;
+  }
+
+  .card {
+    background-color: rgb(255, 251, 251);
+  }
+
+
+}
+
+body.theme-light {
+
+  .navbar-lewagon {
+     background: rgb(188, 179, 179);
+   }
+
+   .card {
+    background-color: gray;
+}
+p.nom{
+  color: black;
+ }
+ .footer-distributed{
+  background-color: gray;
+ }
+ .nouha{
+  color:black
+ }
+ .footer-company-about{
+  color: white;
+ }
 }

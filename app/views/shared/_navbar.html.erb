@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon " data-controller="mode_controller">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
       <div class="logo__container">
@@ -21,6 +21,8 @@
           <li class="nav-item">
           <%= link_to "My bookings", history_path, class: "nav-link" %>
         </li>
+        <img src="https://res.cloudinary.com/ddiq9sddp/image/upload/v1707409516/sun_rolj04.png" id="dark-switch" style="width: 30px "/>
+
       <% else %>
       <li class="nav-item">
           <%= link_to "Home", "/", class: "nav-link" %>
@@ -54,9 +56,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
