@@ -3,15 +3,19 @@ class PitchesController < ApplicationController
   def index
     @pitches = Stade.all
   end
+
   def show
-    @pitch = Pitches.find(params[:id])
-    respond_to do |format|
+    @pitch = Stade.find(params[:id])
+    #respond_to do |format|
       # format.html # Show the pitch
-      format.json { render json: @pitch }
-    end
+      #format.json { render json: @pitch }
+    #end
+
+    @booking = Booking.new
   end
+
   def book
-    @pitch  = Pitches.find(params[:id])
+    @pitch  = Stade.find(params[:id])
     if @pitch .reserved
       flash[:alert] = 'Le stade est déjà réservé.'
     else

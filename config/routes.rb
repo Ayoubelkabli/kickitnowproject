@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
 
   resources :bookings, only: [:new, :create]
-  resources :pitches, only: [:index]
+  resources :pitches, only: [:index, :show]
 
 
 
