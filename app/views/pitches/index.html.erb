@@ -24,7 +24,7 @@
           <p><strong><i class="fa-solid fa-calendar-check"></i></strong> <%= stade.availability %></p>
           <!-- Map Link -->
           <p><a href="<%= stade.map_url %>" target="_blank">View on Map <i class="fa-solid fa-location-dot"></i></a></p>
-          <a data-action="click->flip#flip" href="#"> make a reservation</a>
+          <a href="<%= pitch_path(stade) %>">View Details</a>
         </div>
         <div class="card-body back" data-flip-target="back">
             <div id="booking-form" data-controller="reservation" data-action="click->reservation#submit notification#show">
