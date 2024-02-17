@@ -18,6 +18,31 @@ export default class extends Controller {
     let timeRunning = 3000;
     let timeAutoNext = 7000;
 
+    function showSlider(type){
+      let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+      let thumbnailItemsDom = document.querySelectorAll('.thumbnail .item');
+
+      if(type === 'next'){
+          SliderDom.appendChild(SliderItemsDom[0]);
+          console.log(thumbnailItemsDom)
+          thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+          carouselDom.classList.add('next');
+      }else{
+          SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+          thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+          carouselDom.classList.add('prev');
+      }
+      clearTimeout(runTimeOut);
+      runTimeOut = setTimeout(() => {
+          carouselDom.classList.remove('next');
+          carouselDom.classList.remove('prev');
+      }, timeRunning);
+
+      clearTimeout(runNextAuto);
+      runNextAuto = setTimeout(() => {
+          next.click();
+      }, timeAutoNext)
+  }
     nextDom.onclick = function(){
         showSlider('next');
     }
@@ -29,31 +54,7 @@ export default class extends Controller {
     let runNextAuto = setTimeout(() => {
         next.click();
     }, timeAutoNext)
-    function showSlider(type){
-        let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
-        let thumbnailItemsDom = document.querySelectorAll('.thumbnail .item');
 
-        if(type === 'next'){
-            SliderDom.appendChild(SliderItemsDom[0]);
-            console.log(thumbnailItemsDom)
-            thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-            carouselDom.classList.add('next');
-        }else{
-            SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
-            thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
-            carouselDom.classList.add('prev');
-        }
-        clearTimeout(runTimeOut);
-        runTimeOut = setTimeout(() => {
-            carouselDom.classList.remove('next');
-            carouselDom.classList.remove('prev');
-        }, timeRunning);
-
-        clearTimeout(runNextAuto);
-        runNextAuto = setTimeout(() => {
-            next.click();
-        }, timeAutoNext)
-    }
 
   }
 }
