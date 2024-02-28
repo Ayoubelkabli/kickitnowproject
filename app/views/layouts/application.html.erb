@@ -14,18 +14,18 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <%= javascript_include_tag 'turbo', 'data-turbo-track': 'reload' %>
+
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css" />
   </head>
-  <body data-controller="mode">
+  <body >
       <%=render "shared/flashes"%>
       <%= render "shared/navbar" %>
 
       <%= yield %>
       <div>
-      <div>
-        <i style="color: blue; display: block; margin-top: 500px;" onclick="topFunction()" id="scroll-btn" class="fa-solid fa-angle-up"></i>
+      <div onclick="topFunction()" id="scroll-btn"  class="scroll__div">
+        <i style="color: blue; display: block;" class="fa-solid fa-angle-up"></i>
       </div>
       <div id="email-btn">
         <a href="mailto:kickitnow@gmail.com">

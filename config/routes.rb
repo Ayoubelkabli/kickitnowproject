@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "history", to: "users#history", as: "history"
   get "about", to: "pages#about"
   devise_for :users
-  get "pitches", to: "pitches#index"
   resources :bookings, only: [:new, :create]
-  resources :pitches, only: [:index]
+  resources :pitches, only: [:index, :show]
+  resources :contact
 end

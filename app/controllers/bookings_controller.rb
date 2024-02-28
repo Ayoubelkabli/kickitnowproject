@@ -4,15 +4,23 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @pitch = Stade.find(params[:pitch_id])
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.create(booking_params)
+
     @booking.user = current_user
+
     if @booking.save
-      redirect_to root_path, notice: 'Woo-hoo! Your booking is a go!.'
+      redirect_to root_path, notice: 'Woo-hoo! Your booking is a go! Please check your email for payment details.'
     else
-      redirect_to root_path, alert: 'Oh snap! The pitch is partying with someone else.'
+      redirect_to root_path, alert: 'Tickets Unavailable. Please check again later.'
+
+
+
+
+
 
     end
   end
@@ -20,6 +28,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:stade_id, :date)
+    params.require(:booking).permit(:stade_id, :date, :pitch_id)
   end
 end

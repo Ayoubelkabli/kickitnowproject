@@ -1,61 +1,9 @@
-// // Import page-specific CSS files here.
-
-// // body{
-// //   overflow-x: hidden
-// // }
-// .card-container {
-//   display: flex;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-//   padding: 48px 16px 24px 16px;
-
-// }
-// .custom-card {
-//   width: 23%; /* Adjust the width as needed */
-//   margin-bottom: 20px;
-//   border: 1px solid #ddd; /* Border for separation */
-//   border-radius: 8px; /* Optional: Add border-radius for rounded corners */
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
-//   transition: transform 0.3s ease-in-out;
-// }
-// .custom-card:hover {
-//   transform: scale(1.05); /* Scale up on hover for a subtle zoom effect */
-// }
-// .card-img-top {
-//   border-top-left-radius: 8px;
-//   border-top-right-radius: 8px;
-//   height: 150px;
-
-// }
-// .card-body {
-//   padding:16px
-
-// }
-
-// .container-index {
-// width: 100%;
-// padding-right: 15px;
-// padding-left: 15px;
-// margin-right: auto;
-// margin-left: auto;
-// margin-top: 34px;
-// }
-
-// .btn.btn-primary.book-now {
-//   display: block;
-//   margin: 0 auto;
-// }
-
-// @import "home";
-// @import "history";
-
-
-// .form-check{
-//   padding-left: 0 !important;
-// }
-// .form-check-label{
-//   margin-right: 8px;
-// }
+.form-check{
+  padding-left: 0 !important;
+}
+.form-check-label{
+  margin-left: 8px !important;
+}
 
 
 
@@ -94,9 +42,16 @@
     }
     &.back{
       transform: rotateY(180deg);
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: none;
+      min-height: 300px;
     }
     &.front{
       transform: rotateY(0deg);
+      border: 1px solid rgba(0,0,0,.1);
+      border-top: none;
+      min-height: 300px;
     }
   }
   .capacity{
@@ -157,6 +112,8 @@
 }
 #booking-form label {
   margin-bottom: 8px;
+  color: #000;
+  font-size: 16px;
 }
 #booking-form input[type="datetime-local"] {
   width: 100%;
@@ -188,3 +145,12 @@ p {
 @import "home";
 @import "history";
 @import "aboutUs";
+@import "stade-show";
+
+.container-index{
+  padding: 0 !important;
+  margin-top: 0!important;
+}
+.pitches__card__title{
+  color: #000 !important;
+}
