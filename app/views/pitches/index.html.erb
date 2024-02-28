@@ -19,9 +19,9 @@
           <h3 class="card-title pitches__card__title"><%= stade.name %></h3>
           <p class="card-text"><%= stade.desc %></p>
           <!-- Surface Type -->
-          <p><strong><i class="fa-solid fa-water"></i></strong> <%= stade.surface_type %></p>
+          <%# <p><strong><i class="fa-solid fa-water"></i></strong> <%= stade.surface_type %></p> %>
           <!-- Availability -->
-          <p><strong><i class="fa-solid fa-calendar-check"></i></strong> <%= stade.availability %></p>
+          <%# <p><strong><i class="fa-solid fa-calendar-check"></i></strong> <%= stade.availability %></p> %>
           <!-- Map Link -->
           <p><a href="<%= stade.map_url %>" target="_blank">View on Map <i class="fa-solid fa-location-dot"></i></a></p>
           <a href="<%= pitch_path(stade) %>">View Details</a>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_08_162736) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_27_000451) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_162736) do
     t.string "surface_type"
     t.string "availability"
     t.string "map_url"
+    t.string "team"
+    t.decimal "price"
   end
 
   create_table "users", force: :cascade do |t|

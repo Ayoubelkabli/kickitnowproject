@@ -12,14 +12,11 @@ Rails.application.routes.draw do
   end
   get "history", to: "users#history", as: "history"
   get "about", to: "pages#about"
-
+  devise_for :users
   resources :bookings, only: [:new, :create]
   resources :pitches, only: [:index, :show]
+  resources :contact
 
 
-
-  resources :chatrooms, only: :show do
-    resources :messages, only: :create
-  end
-
+ 
 end

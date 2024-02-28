@@ -13,9 +13,14 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to root_path, notice: 'Woo-hoo! Your booking is a go!.'
+      redirect_to root_path, notice: 'Woo-hoo! Your booking is a go! Please check your email for payment details.'
     else
-      redirect_to root_path, alert: 'Oh snap! The pitch is partying with someone else.'
+      redirect_to root_path, alert: 'Tickets Unavailable. Please check again later.'
+
+
+
+
+
 
     end
   end
