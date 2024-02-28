@@ -1,5 +1,6 @@
 Stade.destroy_all
 Stade.create(
+
   name: " Ibn Batota Staduim",
   desc: "The Ibn Batouta Stadium offers a seating capacity of 68,000 (including 7,150 seats for the press and 500 VIP seats) following the extension of the north and south stands. Located 10 km from the city center.",
   img:"https://res.cloudinary.com/ddiq9sddp/image/upload/v1708954779/WhatsApp_Image_2024-02-23_at_22.59.54_vcyoqk.jpg",
@@ -27,6 +28,8 @@ Stade.create(
   price:  5.00,
   team: "Saudi Arabia VS Brazil",
   map_url: "https://maps.app.goo.gl/ny1LgdiCQtqLkxtr5"
+
+  
 )
 Stade.create(
   name: " Adrar Staduim",

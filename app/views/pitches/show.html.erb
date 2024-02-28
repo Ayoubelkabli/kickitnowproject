@@ -9,6 +9,7 @@
 
     <span class="badge rounded-pill text-bg-success"><strong><i class="fas fa-bolt"></i></strong> <%= @pitch.team %></span>
 
+
     <span class="badge rounded-pill text-bg-success"><a href="<%= @pitch.map_url %>" target="_blank"><i class="fa-solid fa-location-dot"></i>View on Map </a></span>
 
     <span class="badge rounded-pill text-bg-success"><strong><i class="fa-solid fa-key"></i></strong> make a reservation </span>
@@ -20,6 +21,7 @@
       <input type="datetime-local" id="date" name="booking[date]">
       <input type="hidden" id="idstade" value="<%= @pitch.id %>" name="booking[stade_id]">
       <input type="submit" value="Book your ticket now!" class="btn btn-primary">
+
     </form>
 
   </div>
